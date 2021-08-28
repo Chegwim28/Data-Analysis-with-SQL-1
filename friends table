@@ -1,0 +1,21 @@
+CREATE TABLE friends(
+id INTEGER PRIMARY KEY,
+name TEXT,
+birthday DATE,
+nation_of_origin TEXT DEFAULT 'Nigeria' );
+
+INSERT INTO friends (id,name,birthday)
+VALUES (1,'Storm','May 30th,1940');
+INSERT INTO friends (id,name,birthday)
+VALUES (2,'Somi Otu','June 21st,1999');
+INSERT INTO friends(id,name,birthday)
+VALUES (3,'Jim Jones','May 5th,2000');
+
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+UPDATE friends
+SET email = 'storm@codeacademy.com'
+WHERE id = 1;
+DELETE FROM friends
+WHERE name IS 'Storm';
+SELECT * FROM friends;
